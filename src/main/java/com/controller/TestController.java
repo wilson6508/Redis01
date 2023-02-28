@@ -1,14 +1,25 @@
 package com.controller;
 
+import com.service.TestService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 @RestController
 public class TestController {
 
-    @GetMapping("/test")
-    public String test() {
-        return "test";
+    @Resource
+    private TestService testService;
+
+    @GetMapping("/stockInfo")
+    public String stockInfo() {
+        return testService.testStock();
+    }
+
+    @GetMapping("/oddInfo")
+    public String oddInfo() {
+        return testService.testOdd();
     }
 
 }
