@@ -2,5 +2,7 @@ server:
   port: -1
 project:
   api-url:
-    stock-info: ""
-    odd-info: ""
+    single-stock: ""
+    single-odd: ""
+    multi-stock: ""
+    multi-odd: ""
