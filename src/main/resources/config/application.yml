@@ -1,0 +1,15 @@
+server:
+  port: 7500
+spring:
+  cache:
+    type: redis
+  redis:
+    host: 192.168.93.100
+    port: 6379
+    password: 123321
+project:
+  api-url:
+    single-stock: "https://script.google.com/macros/s/AKfycbzx-pPstg8CREkl4UDnmW87IptlPSAakmj0NOChQhNfKwwuhXaE7YKWRbzzHLBU8g0/exec?stockId=%s"
+    single-odd: "https://script.google.com/macros/s/AKfycbwXwgFAolbRin-hp8vG6fUAQ_eeJdlzof5dbmYplL4U1VBThGdgXM7gKYSLS9yiCodn/exec?stockId=%s"
+    multi-stock: "https://script.google.com/macros/s/AKfycbxwaAz-KSrLmw1GMzXiVUROT3_zUiJ4SucSQLYxKXbycbClo44DtvwsmCP2UnjqiXdO/exec?stockIds=%s"
+    multi-odd: "https://script.google.com/macros/s/AKfycbx_eShEKSJcs9ds98mxU5QoUveLXzJdGVIamEfOaM3TbLh1QrHhy_533PUkdBK-lOY/exec?stockIds=%s"

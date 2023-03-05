@@ -12,11 +12,6 @@ public class TestController {
     @Resource
     private TestService testService;
 
-    @GetMapping("/stockInfo")
-    public String stockInfo() {
-        return testService.testStock();
-    }
-
     @GetMapping("/oddInfo")
     public String oddInfo() {
         return testService.testOdd();

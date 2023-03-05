@@ -1,4 +1,4 @@
-package com.utils;
+package com.utils.api;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
