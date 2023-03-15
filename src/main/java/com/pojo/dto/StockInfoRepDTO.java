@@ -1,4 +1,4 @@
-package com.pojo.dto.stockinfo.response;
+package com.pojo.dto;
 
 import lombok.Data;
 

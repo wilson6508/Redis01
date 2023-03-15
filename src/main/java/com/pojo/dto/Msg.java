@@ -1,4 +1,4 @@
-package com.pojo.dto.stockinfo.response;
+package com.pojo.dto;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
@@ -12,5 +12,5 @@ public class Msg {
     @SerializedName("z")
     private String nowPrice;
     @SerializedName("y")
-    private String yesterdayPrice;
+    private String closePrice;
 }

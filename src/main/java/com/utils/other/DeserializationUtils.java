@@ -1,4 +1,4 @@
-package com.utils;
+package com.utils.other;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -19,13 +19,12 @@ public class DeserializationUtils {
     private ObjectMapper objectMapper;
 
     public String serialize(Object obj) {
-        String value = "";
         try {
-            value = objectMapper.writeValueAsString(obj);
+            return objectMapper.writeValueAsString(obj);
         } catch (JsonProcessingException e) {
             log.error("DeserializationUtils serialize Error : {}", e.getMessage());
+            return null;
         }
-        return value;
     }
 
     public <O> O readObject(String json, Class<O> clazz) {

@@ -1,7 +1,7 @@
 package com.utils.api;
 
 import com.google.gson.Gson;
-import com.pojo.dto.stockinfo.response.StockInfoRepDTO;
+import com.pojo.dto.StockInfoRepDTO;
 import com.pojo.prop.ApiUrlProp;
 import com.utils.constants.TimeConstants;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -23,7 +23,7 @@ public class StockApiUtils {
 
     @Retryable(include = {IllegalStateException.class}, maxAttempts = 2, backoff = @Backoff(value = 9000))
     public StockInfoRepDTO getStockInfoRepDTO(String stockId) {
-        String apiUrl = String.format(apiUrlProp.getSingleStock(), stockId);
+        String apiUrl = String.format(apiUrlProp.getMultiStock(), stockId);
         int timeOut = TimeConstants.MIN_TO_MILES;
         String apiRep = ApiUtils.getForEntity(String.class, apiUrl, timeOut, timeOut);
         try {
